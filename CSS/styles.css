@@ -1,0 +1,199 @@
+
+
+:root{
+    --color-white: rgb(255, 255, 255);
+    --background-color: rgb(245, 183, 177 );
+    --font: 'Comic Sans MS';
+    --background-color-header:  rgb(240, 128, 128);
+    --color-blue: rgb(2,77,140);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Comic Sans MS;
+    /* background-color: var(--background-color); */
+    width: 100%;
+}
+.container-general {
+    max-width: 100%; 
+    margin: 0px;
+    padding: 0px; 
+   
+}
+/* Cabecera*/
+.container-header {
+    text-align: center;
+    background-color:  var(--background-color-header)
+}
+.section-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.logo-container-header img {
+    border-radius: 128px;
+    max-width: 100%; 
+}
+
+/*Cuerpo*/
+.container-body {
+    width: 100%;
+    /* padding: 20px; */
+}
+.desayunos-texto{
+    color: var(--color-white);
+    text-align: center;
+}
+
+.desayunos-banner {
+    display: flex;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desayunos-banner > div {
+    flex: 0 1 48%; 
+}
+.desayunos-banner h1, .desayunos-banner h2, .desayunos-banner p {
+    margin-left: 8px;
+    margin-right: 8px;
+
+}
+.desayunos-banner img {
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto; 
+}
+
+.section-desayunos {
+    background-color: var(--color-white);
+    text-align: center;
+}
+.section-desayunos-title{
+    display: flex;
+    background-color: var(--background-color-header);
+    justify-content: center;
+    margin-bottom: 32px;
+}
+.section-desayunos h2{
+    
+    color: var(--color-white);
+    padding: 16px; 
+}
+.desayunos-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 4px;
+}
+.desayunos-img-container img{
+    width: 80%;
+    height: 90%;
+    /* width: calc(90% - 4px); */
+    border-radius: 8px;
+    margin-left: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.desayunos-img-container video {
+    width: 80%;
+    height: 90%; /* Igual que con las imágenes, esto ajusta la altura proporcionalmente */
+    border-radius: 8px;
+    margin-left: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.container-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Estado inicial */
+    }
+    100% {
+        transform: translateY(-10px); /* Estado final, el elemento rebota hacia arriba */
+    }
+}
+
+@media (max-width: 768px) {
+    .desayunos-banner {
+        text-align: center;
+    }
+
+    .desayunos-banner > div {
+        flex-basis: 100%; 
+        margin-bottom: 20px; 
+    }   
+
+    .desayunos-img-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Footer*/
+.container-footer {
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color-header);
+    padding: 20px 0;
+}
+
+.section-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 4px;
+}
+.footer-content-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo-container-footer img {
+    margin-left: 32px ;
+    border-radius: 128px;
+    max-width: 100%; 
+}
+.text-container-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-container-footer ul li {
+    margin-bottom: 5px;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+}
+.footer-contact h3 span img {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .section-footer {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        justify-items: center;
+        text-align: center; 
+    }
+
+    .footer-content-text {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .logo-container-footer img {
+        margin-left: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .text-container-footer {
+        margin-bottom: 20px; 
+    }
+}
+
